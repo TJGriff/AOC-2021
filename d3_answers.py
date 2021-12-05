@@ -1,3 +1,4 @@
+# This code is awful...
 # Import and split lines
 d3 = open('Day 3 Data.txt', 'r').read().split('\n')
 

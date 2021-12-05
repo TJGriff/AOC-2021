@@ -1,3 +1,4 @@
+# THis code could be better
 # Import and split lines
 d4d = open('Day 4 Draw.txt', 'r').read().split(',')
 # Import and split lines in eg
