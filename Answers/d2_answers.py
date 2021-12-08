@@ -1,5 +1,5 @@
 # Import and split lines
-d2 = open('Day 2 Data.txt', 'r').read().split('\n')
+d2 = open('../Data/Day 2 Data.txt', 'r').read().split('\n')
 
 movements = [x.split()[0] for x in d2]
 size = [int(x.split()[1]) for x in d2]

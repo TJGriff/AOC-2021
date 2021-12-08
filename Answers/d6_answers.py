@@ -1,7 +1,7 @@
 import numpy as np
 
 # Import and split lines
-d6 = open('Day 6 Data.txt', 'r').read().split(',')
+d6 = open('../Data/Day 6 Data.txt', 'r').read().split(',')
 d6 = [int(x) for x in d6]
 d6e = [3, 4, 3, 1, 2]
 

@@ -2,8 +2,8 @@
 from collections import Counter
 
 # Import and split lines
-d5d1 = open('Day 5 Data.txt', 'r').read().split('\n')
-d5d1e = open('Day 5 Data Example.txt', 'r').read().split('\n')
+d5d1 = open('../Data/Day 5 Data.txt', 'r').read().split('\n')
+d5d1e = open('../Data/Day 5 Data Example.txt', 'r').read().split('\n')
 # Use arrow as delimiter, strip spaces, split co-ordinates and convert to int
 d5d = [[[int(y) for y in x.strip().split(',')] for x in map.split('->')] for map in d5d1]
 d5de = [[[int(y) for y in x.strip().split(',')] for x in map.split('->')] for map in d5d1e]

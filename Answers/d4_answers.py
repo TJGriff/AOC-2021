@@ -1,13 +1,13 @@
 # THis code could be better
 # Import and split lines
-d4d = open('Day 4 Draw.txt', 'r').read().split(',')
+d4d = open('../Data/Day 4 Draw.txt', 'r').read().split(',')
 # Import and split lines in eg
-d4de = open('Day 4 Draw EG.txt', 'r').read().split(',')
+d4de = open('../Data/Day 4 Draw Eg.txt', 'r').read().split(',')
 # convert to ints
 d4d = [int(x) for x in d4d]
 d4de = [int(x) for x in d4de]
-d4gp = open('Day 4 Grids.txt', 'r').read().split('\n\n')
-d4gpe = open('Day 4 Grid Eg.txt', 'r').read().split('\n\n')
+d4gp = open('../Data/Day 4 Grids.txt', 'r').read().split('\n\n')
+d4gpe = open('../Data/Day 4 Grid Eg.txt', 'r').read().split('\n\n')
 # split out the lines in each grid
 d4gp2 = [x.split('\n') for x in d4gp]
 d4gpe2 = [x.split('\n') for x in d4gpe]

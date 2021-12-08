@@ -1,5 +1,5 @@
 # Import and split lines
-d1 = open('Day 1 Data', 'r').read().split()
+d1 = open('../Data/Day 1 Data', 'r').read().split()
 # Convert strings in list to numbers
 d1 = [int(x) for x in d1]
 

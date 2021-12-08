@@ -1,6 +1,6 @@
 # This code is awful...
 # Import and split lines
-d3 = open('Day 3 Data.txt', 'r').read().split('\n')
+d3 = open('../Data/Day 3 Data.txt', 'r').read().split('\n')
 
 # The binary number is stored as a string but that doesn't matter for out purposes
 
