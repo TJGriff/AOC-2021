@@ -16,10 +16,11 @@ def get_adj_peaks(num_grid, x, y):
     :param num_grid: Grid of numbers in list form
     :param x: x co-ordinate
     :param y: y co-ordinate
-    :return: Adjacent peaks
+    :return: Numers of adjacent peaks, co-ordinates of adjacent peaks
     """
     if x == 0:
         # a is a list of all adjacent numbers
+        # b is a list of all adjacent co-ordinates
         if y == 0:
             a = [num_grid[x + 1][y], num_grid[x][y + 1]]
             b = [(x + 1, y), (x, y + 1)]
@@ -121,17 +122,15 @@ def find_all_peaks_in_basin(x_len, y_len, basin_grid, curr_basin):
 
     return basin_grid
 
-
-# For each individual number we want to create a set of the four numbers around it...
 def find_basins(num_grid):
     """
     Create a list of basins which have 9s or the edges surrounding it
     :param num_grid: Rectangular grid of numbers in list form
     :return: List of points which all the numbers around it are lower than the current point
     """
-    # Got to the first point and iteratively find
+    # Befine our initial grid as -1s (to be marked)
     basin_grid = [[-1 for _ in range(len(num_grid[0]))] for _ in range(len(num_grid))]
-    # First mark all our peaks as -100
+    # First mark all our peaks (9s) as -100
     for x in range(len(num_grid)):
         # Assume input is rectangular
         for y in range(len(num_grid[0])):
@@ -140,7 +139,7 @@ def find_basins(num_grid):
             else:
                 pass
     # Now slowly replace all -1s with a basin number
-    # Use functions above to search for our next unmarked peak (-1) and then populate all other peaks around it
+    # Use functions above to search for our next unmarked peak (-1) and then populate all other peaks around it that's in the same basin
     curr_basin = 0
     while ([x for y in basin_grid for x in y].count(-1) > 0) & (curr_basin < 10000):
         find_next_unmarked_peak(len(basin_grid), len(basin_grid[0]), basin_grid, curr_basin)
